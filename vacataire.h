@@ -14,15 +14,8 @@ class vacataire: public personne {
 private:
     std::string enseignement;
 public:
-    vacataire(int id, std::string nom, std::string adresse,std::string enseignement): personne(id,nom,adresse){
-        this->enseignement=enseignement;
-    }
-    void display(){
-        std::cout<<"Nom : ";
-        std::cout<<this->nom<<std::endl;
-        std::cout<<"Specialite : ";
-        std::cout<<this->enseignement<<std::endl;
-    }
+    vacataire(int id, std::string nom, std::string adresse,std::string enseignement);
+    void display();
 };
 
 #endif //UNTITLED_VACATAIRE_H

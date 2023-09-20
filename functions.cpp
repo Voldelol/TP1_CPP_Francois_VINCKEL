@@ -6,7 +6,7 @@
 #include "titulaire.h"
 #include <vector>
 
-void maxArray(int arr[],int size){
+int maxArray(int arr[],int size){
 
     int res=arr[0];
     for (int i = 0; i < size; ++i) {
@@ -17,8 +17,9 @@ void maxArray(int arr[],int size){
     }
     std::cout<<"Max elem is :";
     std::cout<<res<<std::endl;
+    return res;
 }
-void minArray(int arr[],int size){
+int minArray(int arr[],int size){
     int res=arr[0];
     for (int i = 0; i < size; ++i) {
         std::cout<<i<<std::endl;
@@ -28,6 +29,14 @@ void minArray(int arr[],int size){
     }
     std::cout<<"Min elem is :";
     std::cout<<res<<std::endl;
+    return res;
+}
+int* minAndMax(int arr[],int size){
+    int* res=new int[2];
+    res[0]= minArray(arr,size);
+    res[1]= maxArray(arr,size);
+    return res;
+
 }
 void enterData(int* idPtr,std::string* nomPtr,std::string* addressePtr){
     std::cout<<"Entrez l'ID"<<std::endl;

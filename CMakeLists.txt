@@ -17,4 +17,6 @@ add_executable(untitled main.cpp
         linkedNumbers.cpp
         linkedNumbers.h
         etudiant.cpp
-        etudiant.h)
+        etudiant.h
+        gestion.cpp
+        gestion.h)

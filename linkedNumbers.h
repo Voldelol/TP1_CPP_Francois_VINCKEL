@@ -14,63 +14,15 @@ private:
     linkedNumbers *previous;
     linkedNumbers *next;
 public:
-    linkedNumbers(int x, linkedNumbers *previous, linkedNumbers *next) {
-        this->x = x;
-        this->previous = previous;
-        this->next = next;
-    };
+    linkedNumbers(int x, linkedNumbers *previous, linkedNumbers *next);
 
-    int count() {
-        int res = 1;
+    int count();
 
-        linkedNumbers *temp = this;
-        while (temp->next != nullptr) {
+    void add(int x);
 
-            res++;
-            temp = temp->next;
+    void show();
 
-        }
-        temp->next = nullptr;
-        std::cout << "nombre d'elements :";
-        std::cout << res << std::endl;
-        return res;
-    }
-
-    void add(int x) {
-        linkedNumbers *temp = this;
-        while (temp->next != nullptr) {
-            temp = temp->next;
-
-        }
-
-        temp->next = new linkedNumbers(x, temp, nullptr);
-
-
-    }
-
-    void show() {
-
-        linkedNumbers *temp = this;
-        while (temp != nullptr) {
-
-            std::cout << "Number is : ";
-            std::cout << temp->x << std::endl;
-            temp = temp->next;
-
-        }
-
-    }
-
-    void remove(int x) {
-        linkedNumbers *temp = this;
-        while (temp->x != x) {
-            temp = temp->next;
-
-        }
-        (temp->previous)->next = temp->next;
-        (temp->next)->previous = temp->previous;
-
-    }
+    void remove(int x);
 };
 #endif
 
